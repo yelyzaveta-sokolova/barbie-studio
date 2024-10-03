@@ -127,6 +127,7 @@ justify-content: space-between;
 
 .header-title {
   font-family: "Pacifico", cursive;
+  width: 150px;
   font-weight: 400;
   font-size: 48px;
   letter-spacing: -0.02em;
@@ -231,6 +232,7 @@ justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
   .header-title {
+    width: auto;
       font-size: 46px;
     }
         .header-container {
