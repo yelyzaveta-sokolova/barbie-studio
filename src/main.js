@@ -20,3 +20,42 @@ window.onclick = function(event) {
         modal.classList.remove('active');  // Убрать класс 'active', если кликнули за пределами окна
     }
 }
+
+  let scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      // Показываем кнопку при прокрутке страницы вниз на 300px
+      window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      };
+
+      // Когда пользователь нажимает на кнопку, страница прокручивается вверх
+      scrollTopBtn.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+      
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sliders = document.querySelectorAll('.photo-slider');
+    
+    sliders.forEach(slider => {
+        const images = slider.querySelectorAll('.slider-image');
+        let currentIndex = 0;
+
+        // Устанавливаем первое изображение активным
+        images[currentIndex].classList.add('active');
+
+        // Функция для смены изображений
+        function changeImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        // Смена изображения каждые 3 секунды
+        setInterval(changeImage, 3000);
+    });
+});

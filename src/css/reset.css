@@ -1,3 +1,14 @@
+html{
+  height: 100%;
+}
+.wrapper{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex: 1 1 auto;
+}
 h1,
 h2,
 h3,
@@ -85,13 +96,13 @@ body {
   color: rgba(250, 250, 250, 0.6);
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
         padding-left: 32px;
         padding-right: 32px;
     }
-} */
+}
 
 @media screen and (min-width: 1440px) {
   .container {
@@ -135,18 +146,27 @@ body {
 
 
 }
-
+@media screen and (min-width: 768px) {
+  .header-title {
+      font-size: 30px;
+    }
+        .header-container {
+          justify-content: space-between;
+        }
+                    .header-image {
+                      border-radius: 50%;
+                      width: 100px;
+                      height: 100px;
+          
+                    }
+}
 @media screen and (min-width: 1440px) {
   .header-title {
     font-size: 35px;
   }
+    
 
-  .header-image {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
 
-  }
 }
 
 .modal {
@@ -217,8 +237,8 @@ nav ul li a:hover {
 }
 
 /* über-mich */
-.über-mich {
-  margin-bottom: 16px;
+.über-mich-section {
+  margin-bottom: 32px;
 }
 
 .über-mich-container {
@@ -228,7 +248,7 @@ nav ul li a:hover {
   align-items: center;
 }
 
-.über-mich-title {
+.second-title {
   padding-bottom: 16px;
   width: 284px;
   font-weight: 600;
@@ -251,4 +271,217 @@ nav ul li a:hover {
 
 .über-mich-text {
   line-height: 1.5;
+}
+
+
+@media screen and (min-width: 768px) {
+  .über-mich-photo {
+    width: 330px;
+    height: 400px;
+  }
+
+  .über-mich-container {
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .über-mich-info {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+
+  .über-mich-info {
+    font-size: 60px;
+  }
+}
+
+/* contact */
+
+
+.contact-section{
+  margin-top: 32px;
+ 
+
+}
+.contact-container{
+background-color: #ddadaf;
+padding-top: 16px;
+height: auto;
+padding-bottom: 16px;
+  display: flex;
+gap: 12px;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+.contact-list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+ 
+}
+
+.contact-list-icon{
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+} 
+.contact-list-icon:hover,
+.contact-list-icon:focus{
+  stroke: #FF1493;
+} 
+
+.kontakt-tel{
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.kontakt-tel:hover,
+.kontakt-tel:focus{
+  color: #FF1493;
+}
+
+/* page 2 impressum */
+
+.impressum-title{
+  margin-bottom: 20px;
+  color: #FF69B4;
+}
+.impressum-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.impressum-span{
+  color:#FF69B4;
+  padding-bottom: 16px;
+padding-top: 16px;
+}
+
+/* кнопка */
+ #scrollTopBtn {
+ width: 45px;
+ height: 45px;
+   display: none;
+   /* Скрыта по умолчанию */
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   z-index: 99;
+   /* Поверх всех элементов */
+  background-color: #ff6fae;
+   
+   /* Цвет фона */
+   color: white;
+   /* Цвет текста */
+   border: none;
+   /* Без границы */
+  
+   border-radius: 50%;
+   /* Круглая кнопка */
+   cursor: pointer;
+   /* Курсор при наведении */
+   font-size: 18px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ #scrollTopBtn:hover {
+  background-color: #d73275;
+   /* Цвет при наведении */
+ }
+
+ /* services */
+ .services-section{
+  margin-top: 32px;
+    margin-bottom: 32px;
+ }
+
+
+/* Стиль для карточки */
+.service-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform  250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow  250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Эффект увеличения и тени при ховере */
+.service-card:hover {
+  transform: scale(1.05);
+  /* Увеличение карточки */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Появление тени */
+}
+
+/* Стиль для фото-слайдера */
+.photo-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.slider-image.active {
+  opacity: 1;
+}
+
+/* Стиль для всплывающего окна */
+.hover-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover .hover-info {
+  opacity: 1;
+}
+
+.services-wrapper{
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  
+  .second-title{
+  font-size: 22px;
+  }
+        .services-wrapper {
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: space-evenly;
+              
+        }
+}
+
+@media screen and (min-width: 1440px) {
+  .services-wrapper {
+
+    justify-content: space-between;
+
+  }
+
+
 }
