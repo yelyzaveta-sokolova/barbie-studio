@@ -1,11 +1,15 @@
 
 // Получаем элементы
-const studioTitle = document.getElementById('header-title'); // ID заголовка
+const studioTitle = document.getElementById('header-title');
+const studioImage = document.getElementById('header-image');// ID заголовка
 const modal = document.getElementById('modal');
 const closeModal = document.getElementsByClassName('close')[0];
 
 // Открыть модальное окно при нажатии на заголовок
 studioTitle.onclick = function() {
+    modal.classList.add('active');  // Добавить класс 'active' для плавного открытия
+}
+studioImage.onclick = function() {
     modal.classList.add('active');  // Добавить класс 'active' для плавного открытия
 }
 

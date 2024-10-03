@@ -134,6 +134,15 @@ justify-content: space-between;
   cursor: pointer;
   display: inline-block;
 }
+.header-image{
+  cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-image:hover,
+.header-image:focus{
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 .header-title span {
   display: inline-block;
@@ -202,26 +211,7 @@ justify-content: space-between;
     color: #C71585;
   }
 
-  /* Конечный цвет */
 }
-
-/* .header-title {
-  word-spacing: 10px;
-  color: #FFC0CB;
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-.header-title:hover,
-.header-title:focus {
-  color: #C71585;
-} */
 
 .header-image {
   border-radius: 50%;
@@ -347,11 +337,18 @@ nav ul li a:hover {
 }
 
 .über-mich-info {
-  font-weight: 800;
-  font-size: 20px;
-  color: #FF69B4;
-}
+  color: #f88dc3;
+    font-size: 20px;
+    margin-bottom: 12px;
+    
 
+}
+.über-mich-titul{
+  font-weight: 800;
+    font-size: 20px;
+    color: #FF69B4;
+    text-align: center;
+}
 .über-mich-text {
   color: #b8809c;
   line-height: 1.5;
@@ -360,18 +357,20 @@ nav ul li a:hover {
 
 @media screen and (min-width: 768px) {
   .über-mich-photo {
-    width: 330px;
-    height: 400px;
+    width: 420px;
+    height: 520px;
   }
 
   .über-mich-container {
-    flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
   }
+.über-mich-titul {
+  font-size: 40px;
 
+}
   .über-mich-info {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -379,6 +378,10 @@ nav ul li a:hover {
   .über-mich-info {
     font-size: 60px;
   }
+    .über-mich-titul {
+      font-size: 50px;
+  
+    }
 }
 
 /* contact */
