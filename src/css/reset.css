@@ -237,9 +237,7 @@ nav ul li a:hover {
 }
 
 /* über-mich */
-.über-mich-section {
-  margin-bottom: 32px;
-}
+
 
 .über-mich-container {
   display: flex;
@@ -301,13 +299,13 @@ nav ul li a:hover {
 
 
 .contact-section{
-  margin-top: 32px;
+  padding-top: 32px;
  
 
 }
 .contact-container{
 background-color: #ddadaf;
-padding-top: 16px;
+padding-top: 32px;
 height: auto;
 padding-bottom: 16px;
   display: flex;
@@ -390,10 +388,7 @@ padding-top: 16px;
  }
 
  /* services */
- .services-section{
-  margin-top: 32px;
-    margin-bottom: 32px;
- }
+
 
 
 /* Стиль для карточки */
@@ -429,7 +424,7 @@ padding-top: 16px;
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
 }
 
@@ -449,7 +444,7 @@ padding-top: 16px;
   padding: 10px;
   box-sizing: border-box;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-card:hover .hover-info {
@@ -487,7 +482,7 @@ padding-top: 16px;
 
 /* REWIEWS */
 
-.testimonials {
+.section {
   margin-top: 32px;
   margin-bottom: 32px;
 }
@@ -496,6 +491,7 @@ padding-top: 16px;
 display: flex;
 flex-direction: column;
 gap: 28px;
+margin-top: 16px;
 }
 .testimonials-list-item {
   position: relative;
@@ -530,7 +526,10 @@ gap: 28px;
 }
 
 @media screen and (min-width: 768px) {
- 
+.section {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
   .testimonials-text {
     font-size: 16px;
   }
@@ -538,6 +537,7 @@ gap: 28px;
       flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-evenly;
+        margin-top: 22px;
     }
         .testimonials-list-item{
           width: calc((100% - 24px) / 3);;
@@ -552,3 +552,89 @@ gap: 28px;
     .testimonials-list-item
   {width: calc((100% - 16px) / 4);}
 }
+
+/* CARE-TIPPS */
+
+
+ .care-card-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   flex-direction: column;
+ }
+
+ .care-card {
+   position: relative;
+   padding: 20px;
+   background-color: #ffb5d5;
+   border: 1px solid #ff00bf;
+   border-radius: 8px;
+   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   cursor: pointer;
+ }
+
+ .care-card:hover {
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+   background-color: #f578d698;
+ }
+
+ .care-card-title {
+  margin-top: 8px;
+   font-size: 18px;
+   color: #b8809c;
+   text-align: center;
+ }
+
+ .care-card-content {
+  margin-top: 8px;
+   font-size: 16px;
+   color: #f3dfdf;
+   opacity: 0;
+   max-height: 0;
+   overflow: hidden;
+  pointer-events: none;
+   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), max-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .care-card:hover .care-card-content {
+   opacity: 1;
+   max-height: 200px;
+        pointer-events: all;
+      
+   
+ }
+
+ .care-title {
+   font-size: 20px;
+   margin-bottom: 20px;
+  margin-top: 20px;
+   color: #FF69B4;
+ }
+
+ @media screen and (min-width: 768px) {
+   .care-card-container {
+     flex-direction: row;
+     justify-content: space-between;
+   }
+
+   .care-card {
+     width: calc(50% - 20px);
+     /* Для отображения по 2 карточки в ряд */
+   }
+ }
+
+ /* Медиазапрос для компьютеров */
+ @media screen and (min-width: 1440px) {
+   .care-card-container {
+     justify-content: space-between;
+   }
+
+   .care-card {
+     width: calc(25% - 20px);
+     /* Для отображения по 4 карточки в ряд */
+   }
+ }
+
+ /* HERO */
+
+ 

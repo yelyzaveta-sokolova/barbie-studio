@@ -59,3 +59,4 @@ document.addEventListener("DOMContentLoaded", function() {
         setInterval(changeImage, 3000);
     });
 });
+
