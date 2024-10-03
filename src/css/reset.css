@@ -594,7 +594,7 @@ margin-top: 16px;
   font-size: 14px;
   text-align: center;
   line-height: 1.3;
-  color: rgba(252, 249, 249, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .testimonials-title {
@@ -612,6 +612,13 @@ margin-top: 16px;
   left: 50%;
   transform: translate(-50%, -40%);
   border-radius: 100%;
+}
+.rating {
+  font-size: 18px;
+  text-align: center;
+  color: #FF69B4;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -641,6 +648,66 @@ margin-top: 16px;
     .testimonials-list-item
   {width: calc((100% - 16px) / 4);}
 }
+/* PRICE */
+.accordion {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.accordion-header {
+  background-color: #f79eca;
+  color:rgb(184, 128, 156);
+  cursor: pointer;
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-header:hover {
+  background-color: rgb(255, 105, 180);
+}
+
+.accordion-content {
+  background-color: #ffb5d5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 20px;
+}
+
+.price-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.price-item-title {
+  color: rgb(184, 128, 156);
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.price-item-par {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Открытый аккордеон */
+.accordion-content.open {
+  max-height: 500px;
+  /* Можно задать больше, в зависимости от контента */
+}
+
+/* Добавление плавной анимации для аккордеона */
+.accordion-content {
+  transition: max-height 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+
 
 /* CARE-TIPPS */
 
@@ -724,6 +791,33 @@ margin-top: 16px;
    }
  }
 
- /* HERO */
+.section {
+  opacity: 0;
+  /* По умолчанию секция невидима */
+  transform: translateY(50px);
+  /* Смещаем секцию вниз */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  /* Плавный переход */
+  margin-top: 32px;
+    margin-bottom: 32px;
+}
 
+.section.visible {
+  opacity: 1;
+  /* Видимость 100% */
+  transform: translateY(0);
+  /* Возвращаем секцию в исходное положение */
+}
  
+ @media screen and (min-width: 768px) {
+  .section{
+    margin-top: 48px;
+      margin-bottom: 48px;
+ }}
+
+ @media screen and (min-width: 1440px) {
+  .section {
+      margin-top: 72px;
+      margin-bottom: 72px;
+    }
+ }

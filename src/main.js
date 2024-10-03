@@ -64,3 +64,36 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.querySelectorAll('.accordion-header').forEach(button => {
+  button.addEventListener('click', () => {
+    const accordionContent = button.nextElementSibling;
+
+    button.classList.toggle('active');
+
+    if (button.classList.contains('active')) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+    } else {
+      accordionContent.style.maxHeight = 0;
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.section');
+
+    function handleScroll() {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const triggerPoint = window.innerHeight * 0.8; // Порог видимости, когда секция станет видимой
+
+            if (sectionTop < triggerPoint) {
+                section.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Инициализация - проверяем скролл при загрузке страницы
+    handleScroll();
+});
