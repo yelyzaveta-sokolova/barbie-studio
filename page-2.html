@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,19 +10,30 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
-    <script type="module" crossorigin src="/barbie-studio/assets/main-Bt-SY8av.js"></script>
-    <link rel="stylesheet" crossorigin href="/barbie-studio/assets/main-Dz5E9AIR.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script type="module" crossorigin src="/barbie-studio/assets/main-DPSnNga2.js"></script>
+    <link rel="stylesheet" crossorigin href="/barbie-studio/assets/main-C3UeZ4gT.css">
   </head>
   <body>
     <div class="wrapper">
     <header>
       <div class="container header-container">
-        <h1 class="header-title accent-color" id="header-title">barbie studio</h1>
-        <img class="header-image" src="/barbie-studio/assets/favicon-C97pwXvN.jpg" alt="logo" />
+         <h1 class="header-title accent-color" id="header-title">
+      <span>B</span><span>a</span><span>r</span><span>b</span><span>i</span><span>e</span>
+      <span> </span>
+      <span>S</span><span>t</span><span>u</span><span>d</span><span>i</span><span>o</span>
+    </h1>
+        <img class="header-image" id="header-image" src="/barbie-studio/assets/favicon-C97pwXvN.jpg" alt="logo" />
       </div>
     </header>
       <div id="modal" class="modal">
@@ -30,10 +41,11 @@
             <span class="close">&times;</span>
             <nav>
                 <ul>
-                    <li><a href="./index.html#über-mich">Über mich</a></li>
-                    <li><a href="./index.html#services">Services</a></li>
-                    <li><a href="./index.html#gallery">Gallery</a></li>
-                    <li><a href="./index.html#reviews">Reviews</a></li>
+                  <li><a href="./index.html">Homepage</a></li>
+                    <li><a href="#über-mich">Über mich</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#care-tips">Tipps zur Pflege</a></li>
+                    <li><a href="#reviews">Bewertungen</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="./english-page.html">English</a></li>
                 </ul>
@@ -42,7 +54,9 @@
     </div>
     </div>
     <main>
-    <section class="container">
+      <!-- IMPRESSUM -->
+<section class="section">
+  <div class="container">
       <h2 class="impressum-title">Impressum</h2>
       <div class="impressum-wrapper">
       <p>Angaben gemäß § 5 TMG</p>
@@ -65,8 +79,10 @@ Neustraße 50,<br>
 <h4 class="impressum-span"> Urheberrecht</h4>
 <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
 </div>
+</div>
     </section>
-<!-- footer -->
+
+<!-- FOOTER -->
     <section id="contact" class="contact-section">
         <div class="container contact-container">
             <h3>Folgen mir</h3>
@@ -89,7 +105,7 @@ Neustraße 50,<br>
                       class="kontakt-tel"
                     >Datenschutzerklärung</a>
                     <h3>Kontakt</h3>
-                    <a href="./index.html"  >
+                    <a href="./index.html"  class="kontakt-tel">
 BARBIE STUDIO</a>
 <a href="https://maps.app.goo.gl/AzvvcairqTziZ6hw6?g_st=com.google.maps.preview.copy" class="kontakt-tel" target="_blank"
                 >Neustraße 50,<br>
@@ -105,9 +121,7 @@ BARBIE STUDIO</a>
                       href="https://api.whatsapp.com/send?phone=4916094973197"
                       class="contact-list-link"
                     >
-                      <!-- <svg class="" width="26" height="26">
-                        <use href="./img/icons.svg#icon-what"></use>
-                      </svg> -->
+                     
                       <img src="data:image/png;base64,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" alt="whatsapp" width="26px" height="26px">
                     </a>
                    
@@ -120,3 +134,6 @@ BARBIE STUDIO</a>
 
 </html>
 
+
+ 
+ 
