@@ -332,6 +332,14 @@ nav ul li a:hover {
   color: #ddadaf;
 }
 
+.über-mich-list-item{ 
+ padding-left: 38px;
+ background-image: url(../img/icon-eyelash.png);
+ background-position: 0 0;
+ background-size: 22px;
+ background-repeat: no-repeat;
+}
+ 
 .über-mich-photo {
   border-radius: 15px;
 }
@@ -814,6 +822,8 @@ margin-top: 16px;
     margin-top: 48px;
       margin-bottom: 48px;
  }}
+
+
 
  @media screen and (min-width: 1440px) {
   .section {

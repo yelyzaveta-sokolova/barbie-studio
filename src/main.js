@@ -97,3 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Инициализация - проверяем скролл при загрузке страницы
     handleScroll();
 });
+
+
+
