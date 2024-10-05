@@ -78,8 +78,17 @@ body {
 .section {
   margin-top: 32px;
   margin-bottom: 32px;
+  opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+
+}
 .accent-color {
   color: #FF1493;
 }
@@ -641,22 +650,7 @@ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 }
 
-.care-tips-section {
-  opacity: 0;
 
-  transform: translateY(50px);
-
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-.care-tips-section.visible {
-  opacity: 1;
-
-  transform: translateY(0);
-
-}
 
 /* REWIEWS */
 
