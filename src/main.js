@@ -1,3 +1,4 @@
+// МОДАЛЬНОЕ ОКНО ХЕДЕР 
 
 // Получаем элементы
 const studioTitle = document.getElementById('header-title');
@@ -25,6 +26,9 @@ window.onclick = function(event) {
     }
 }
 
+
+// КНОПКА ПРОКРУТКИ СТРАНИЦЫ
+
   let scrollTopBtn = document.getElementById("scrollTopBtn");
 
       // Показываем кнопку при прокрутке страницы вниз на 300px
@@ -41,6 +45,7 @@ window.onclick = function(event) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
 };
       
+// СЕКЦИЯ УСЛУГ, ПЛАВНОЕ ИЗМЕНЕНИЕ КАРТИНОК ДО И ПОСЛЕ
 
 document.addEventListener("DOMContentLoaded", function() {
     const sliders = document.querySelectorAll('.photo-slider');
@@ -64,6 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+//  АККОРДИОН ПРАЙС
+
 document.querySelectorAll('.accordion-header').forEach(button => {
   button.addEventListener('click', () => {
     const accordionContent = button.nextElementSibling;
@@ -77,6 +84,8 @@ document.querySelectorAll('.accordion-header').forEach(button => {
     }
   });
 });
+
+// ПЛАВНОЕ ОТКРЫТИЕ СЕКЦИЙ
 
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('.section');
@@ -97,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Инициализация - проверяем скролл при загрузке страницы
     handleScroll();
 });
+
 
 
 
