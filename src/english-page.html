@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9CPNNB7S00"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-9CPNNB7S00');
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" sizes="32x32" href="./public/favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,6 +83,9 @@
               </li>
               <li class="nav-list-item">
                 <a class="nav-list-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-list-link" href="#form">Make an appointment</a>
               </li>
               <li class="nav-list-item">
                 <a class="nav-list-link" href="./index.html">Deutsch</a>
@@ -516,8 +532,90 @@
               </li>
             </ul>
           </div>
+          <div>
+            <p class="text-small">
+              * All reviews are taken from the studio's Instagram
+            </p>
+          </div>
         </div>
       </section>
+
+      <!-- FORM -->
+      <div class="form-container container section" id="form">
+        <h2 class="form-title">Make an appointment</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="d0189534-19a0-4851-be61-8cd63a9df77b"
+          />
+
+          <label for="имя">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+
+          <label for="номер телефона">Phone number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Phone number for contact in WhatsApp"
+            required
+          />
+
+          <label>Select a service:</label>
+          <select id="service" name="услуга" required>
+            <option value="">Select a service</option>
+            <option value="коррекция">Correction</option>
+            <option value="коррекция + окрашивание бровей">
+              Correction + coloring
+            </option>
+            <option value="коррекция + ламинирование бровей">
+              Laminating + correction
+            </option>
+            <option value="ламинирование бровей + коррекция + окрашивание">
+              Laminating + correction + coloring
+            </option>
+            <option value="окрашивание ресниц">Eyelashes coloring</option>
+            <option value="ламинирование ресниц + окрашивание">
+              Eyelash lifting (with coloring)
+            </option>
+            <option value="ламинирование ресниц + окрашивание бровей">
+              Eyelash lifting + eyebrows coloring
+            </option>
+            <option
+              value="ламинирование ресниц + ламинирование бровей (с окрашиванием и коррекцией)"
+            >
+              Eyelash lifting + eyebrows laminate (also with coloring and
+              correction)
+            </option>
+          </select>
+
+          <label for="пол">Your gender:</label>
+          <select id="gender" name="пол" required>
+            <option value="">Your gender</option>
+            <option value="женский">female</option>
+            <option value="мужской">male</option>
+          </select>
+
+          <label for="дата">Date:</label>
+          <input type="date" id="date" name="date" required />
+
+          <button class="form-button" type="submit">Confirm the request</button>
+        </form>
+
+        <div>
+          <p class="text-small">
+            * This is not an official registration for the procedure, after
+            completing the form you will be contacted to arrange an appointment.
+          </p>
+        </div>
+      </div>
 
       <!-- FOOTER -->
       <footer id="contact" class="contact-section">

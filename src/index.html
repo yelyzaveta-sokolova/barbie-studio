@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9CPNNB7S00"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-9CPNNB7S00');
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" sizes="32x32" href="./public/favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,6 +80,9 @@
               </li>
               <li class="nav-list-item">
                 <a class="nav-list-link" href="#contact">Kontakt</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-list-link" href="#form">Termin vereinbaren</a>
               </li>
               <li class="nav-list-item">
                 <a class="nav-list-link" href="./english-page.html">English</a>
@@ -530,11 +546,93 @@
               </li>
             </ul>
           </div>
+          <div>
+            <p class="text-small">
+              * Alle Bewertungen stammen vom Instagram-Konto des Studios
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- FORM -->
+      <div class="form-container container section" id="form">
+        <h2 class="form-title">Vereinbaren Sie einen Termin</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="d0189534-19a0-4851-be61-8cd63a9df77b"
+          />
 
+          <label for="имя">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ihr Name"
+            required
+          />
+
+          <label for="номер телефона">Telefonnummer:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Telefonnummer für WhatsApp"
+            required
+          />
+
+          <label>Wählen Sie einen Dienst aus:</label>
+          <select id="service" name="услуга" required>
+            <option value="">Wählen Sie einen Dienst aus</option>
+            <option value="коррекция">Zupfen</option>
+            <option value="коррекция + окрашивание бровей">
+              Zupfen + Augenbrauen Färben
+            </option>
+            <option value="коррекция + ламинирование бровей">
+              Augenbrauen Laminieren + Zupfen
+            </option>
+            <option value="ламинирование бровей + коррекция + окрашивание">
+              Augenbrauen Laminieren + Zupfen + Färben
+            </option>
+            <option value="окрашивание ресниц">Wimpern färben</option>
+            <option value="ламинирование ресниц + окрашивание">
+              Wimpernlifging (mit färben)
+            </option>
+            <option value="ламинирование ресниц + окрашивание бровей">
+              Wimpernlifting + Augenbrauen färben
+            </option>
+            <option
+              value="ламинирование ресниц + ламинирование бровей (с окрашиванием и коррекцией)"
+            >
+              Wimpernlifting + Augenbrauen laminieren (auch mit Färben und
+              Zupfen)
+            </option>
+          </select>
+
+          <label for="пол">Ihr Geschlecht:</label>
+          <select id="gender" name="пол" required>
+            <option value="">Ihr Geschlecht</option>
+            <option value="женский">weiblich</option>
+            <option value="мужской">maskulin</option>
+          </select>
+
+          <label for="дата">Datum:</label>
+          <input type="date" id="date" name="date" required />
+
+          <button class="form-button" type="submit">
+            Bestätigen Sie die Anfrage
+          </button>
+        </form>
+
+        <div>
+          <p class="text-small">
+            * Hierbei handelt es sich nicht um eine offizielle Anmeldung zum
+            Eingriff, nach dem Ausfüllen des Formulars werden Sie kontaktiert,
+            um einen Termin zu vereinbaren.
+          </p>
+        </div>
+      </div>
       <!-- FOOTER -->
       <footer id="contact" class="contact-section section">
         <div class="container contact-container">
