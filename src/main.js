@@ -27,6 +27,7 @@ window.onclick = function(event) {
 }
 
 
+
 // КНОПКА ПРОКРУТКИ СТРАНИЦЫ
 
   let scrollTopBtn = document.getElementById("scrollTopBtn");
@@ -106,7 +107,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Инициализация - проверяем скролл при загрузке страницы
     handleScroll();
 });
-
-
 
 
